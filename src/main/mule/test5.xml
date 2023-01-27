@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:netsuite="http://www.mulesoft.org/schema/mule/netsuite"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/netsuite http://www.mulesoft.org/schema/mule/netsuite/current/mule-netsuite.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<netsuite:config name="NetSuite_Config" doc:name="NetSuite Config" doc:id="6f3be7bb-b5c0-4067-ae1e-3d570fe19012" >
+		<netsuite:token-based-authentication-connection consumerKey="f34f043e805dbd895f6a98f07e1c9d6672a5efe4529be391afa139f9cacdaa04" consumerSecret="43be668cd0c7c023189a9d39e45279afbcd2cb2510126d27a95be213d4fb8bbe" tokenId="957d3cca1eb0598f0f465e1d0c3b0a8204755c7dc90543c0ac9101b3dc55e5dd" tokenSecret="f0c9f8ffb0f603eef1252fe771359d763a9a8dba38d8f0ccfed67d5ba59ca5d7" account="TSTDRV2311624" wsdlVersion="V2021_1" />
+	</netsuite:config>
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="2fdbcee1-71cf-430d-b37f-d34828acab53" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="test5Flow" doc:id="7097fe26-216b-4a52-bcdf-83506bebde2b" >
+		<http:listener doc:name="Listener" doc:id="cde6168e-f9e7-4052-bf86-3bfe41146b7a" config-ref="HTTP_Listener_config" path="/test5"/>
+		<ee:transform doc:name="Transform Message" doc:id="7fdc0265-d735-4c1e-a7ea-b94ba5fef7ae" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	Message: "HI All how are u?"
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>
