@@ -26,6 +26,10 @@
 				<version>3.0.0</version>
 			</plugin>
 			<plugin>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>3.0.0-M1</version>
+			</plugin>
+			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
