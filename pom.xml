@@ -40,7 +40,7 @@
 					<uri>https://anypoint.mulesoft.com</uri>
 					<muleVersion>${app.runtime}</muleVersion>
 					<username>itsmeshyaprabuj</username>
-					<password>$Shya26pebbu</password>
+					<password>Shya26pebbu</password>
 					<applicationName>test5</applicationName>					
 					<objectStoreV2>true</objectStoreV2>
 					<region>us-east-2</region>
