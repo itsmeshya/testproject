@@ -9,6 +9,7 @@
 
 	<name>test5</name>
 
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -34,8 +35,8 @@
 					<cloudHubDeployment>
 					<uri>https://anypoint.mulesoft.com</uri>
 					<muleVersion>${app.runtime}</muleVersion>
-					<username>${Mule.User}</username>
-					<password>${Mule.Pwd}</password>
+					<username>itsmeshyaprabuj</username>
+					<password>Shya26pebbu</password>
 					<applicationName>test5</applicationName>					
 					<objectStoreV2>true</objectStoreV2>
 					<region>us-east-2</region>
