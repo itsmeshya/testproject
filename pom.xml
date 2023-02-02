@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>test5</artifactId>
+	<artifactId>tests6</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>test5</name>
+	<name>tests6</name>
 
 
 	<properties>
@@ -41,7 +41,7 @@
 					<muleVersion>${app.runtime}</muleVersion>
 					<username>itsmeshyaprabuj</username>
 					<password>Shya26pebbu</password>
-					<applicationName>test5</applicationName>					
+					<applicationName>tests6</applicationName>					
 					<objectStoreV2>true</objectStoreV2>
 					<region>us-east-2</region>
 					<workers>1</workers>
